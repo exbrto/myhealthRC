@@ -4,6 +4,9 @@ A prescription tracker built with Node.js, Express, and MongoDB. Users sign up, 
 
 ![myhealthRC demo](./public/images/myhealthRC.png)
 
+## Try it here!
+[myhealthRC live site](https://myhealthrc.onrender.com/)
+
 ## Features
 
 - User signup and login with authentication
