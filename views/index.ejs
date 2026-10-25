@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css"></link>
+    <title>Welcome to myhealthRC</title>
+</head>
+<body>
+    <h1>myhealthRC</h1>
+    <section>
+        <h2>Keep Track of all your prescriptions all in one place</h2>
+            <p><i class="fa-solid fa-right-from-bracket"></i><a href="/logout" class="btn btn-default btn-sm">Logout</a></p>
+    </section>
+    <section class="parentSection">
+    <section class="formSection">
+        <form action="/prescriptions" method="POST">
+            <h3>Date Received: </h3><input type="date" name="dateReceived" required></input>   <!-- string inside of the vlaue must exactly match the enum array strings or the session can't be saved to the databser -->
+            <h3>Name of Prescription: </h3><input type="text" name="name" placeholder="ex. Advil" required></input>
+            <h3>Prescription instructions: </h3><input type="text" name="instructions" placeholder="ex. Take 1 two times a day..." required></input>
+            <h3>Quantity: </h3><input type="number" min="0" name="quantity" placeholder="Enter Quantity" required></input>
+            <h3>Expiration: </h3><input type="date" name="expiration"required></input>
+            <h3>Refills Remaining: </h3><input type="number" min="0" name="refills" placeholder="ex. 3" required></input>
+            <button type="submit" class="add">Add</button>
+        </form>
+    </section>
+    <section class="prescriptionLog"> 
+        <% for(let i = 0; i < meds.length; i++) {%>
+        <section class="meds">
+            <img src="/images/prescription.svg" alt="prescription-bottle" id="bottle"></img>
+            <h4><span>Date Received:</span> <%= meds[i].dateReceived.toLocaleDateString('en-US', {timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric', }) %></h4>
+            <h4><span>Name of Prescription:</span> <%= meds[i].name %></h4>
+            <h4><span>Prescription instructions:</span> <%= meds[i].instructions %></h4>
+            <h4><span>Quantity:</span> <input type="number" min="0" class="quantity" id="quantity-<%= meds[i]._id %>" value="<%= meds[i].quantity %>"></h4>
+            <h4><span>Expiration:</span> <%= meds[i].expiration.toLocaleDateString('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'}) %></h4>
+            <h4><span>Refills Remaining:</span> <input type="number" min="0" class="refills" id="refills-<%= meds[i]._id %>" value="<%= meds[i].refills %>"></input></h4>
+
+            <button class="editSave" data-edit-save-id="<%= meds[i]._id %>">Edit/Save</button>
+            <button class="trash" data-trash-id="<%= meds[i]._id %>"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
+
+        </section>
+       <% } %>
+    </section>
+    </section>
+    <script src="https://kit.fontawesome.com/d64fd93eee.js" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

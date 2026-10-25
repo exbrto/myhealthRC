@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    font-size: 62.5%;
+    background: #1d3557;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #f1faee;
+    font-family: 'Roboto Condensed', 'Helvetica', sans-serif;
+}
+header{
+    background: #a8dadc;
+    padding: .5rem 7.5%;
+    color: #000;
+}
+body > h1{
+    background: #a8dadc;
+    color: #000;
+    margin: 0;
+    padding: 1.5rem 7.5%;
+}
+body > section{
+    margin: 0 7.5%;
+}
+h1 + section{
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: #f1f6fa;
+    color: #000;
+    margin-top: 3vh;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#bottle{
+    width: 65px;
+    height: 65px;
+    padding: 1.5rem 1rem 0 1.5rem;
+}
+.parentSection{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+.formSection{
+    background: #f1f6fa;
+    max-width: 20%;
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: #000;
+    padding: 1rem 1%;
+    align-self: flex-start;
+}
+.prescriptionLog{
+    min-width: 77%;
+}
+.meds{
+    border: 2px solid #000;
+    border-radius: 15px;
+    background: #f1f6fa;
+    color: #000;
+    padding: 0 1%;
+    margin-bottom: 5px;
+}
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 1.6rem;
+}
+h3, p, a{
+    font-size: 1.2rem;
+}
+input{
+    font-size: 1.2rem;
+    text-indent: 5px;
+}
+h4{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: normal;
+}
+span{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.quantity, .refills{
+    min-width: 3rem;
+    max-width: 6rem;
+    border: 1px solid #f1f6fa;
+    background: #f1f6fa;
+}
+label{
+    font-size: 1rem;
+}
+.loginInfo{
+    font-size: 1.4rem;
+}
+button{
+    background: #1d3557;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #a8dadc;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 3px 0;
+}
+a{
+    background: #1d3557;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #a8dadc;
+    padding: 5px 10px;
+    text-decoration: none;
+}
