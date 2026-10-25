@@ -41,7 +41,7 @@
             <h4><span>Expiration:</span> <%= meds[i].expiration.toLocaleDateString('en-US', {timeZone: 'UTC', month: 'short', year: 'numeric'}) %></h4>
             <h4><span>Refills Remaining:</span> <input type="number" min="0" class="refills" id="refills-<%= meds[i]._id %>" value="<%= meds[i].refills %>"></input></h4>
 
-            <button class="editSave" data-edit-save-id="<%= meds[i]._id %>"><i class="fa-regular fa-floppy-disk" aria-hidden="true"></button>
+            <button class="editSave" data-edit-save-id="<%= meds[i]._id %>"><i class="fa-regular fa-floppy-disk" aria-hidden="true"></i></button>
             <button class="trash" data-trash-id="<%= meds[i]._id %>"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
 
         </section>
