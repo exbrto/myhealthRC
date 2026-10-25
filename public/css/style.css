@@ -91,7 +91,7 @@ span{
     border: 1px solid #f1f6fa;
     background: #f1f6fa;
 }
-label{
+label, h5{
     font-size: 1rem;
 }
 .loginInfo{
