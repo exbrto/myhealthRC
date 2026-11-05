@@ -117,3 +117,42 @@ a{
 h5{
     font-size: 1rem;
 }
+/* Tablets and small laptops */
+@media (max-width: 900px){
+    .parentSection{
+        flex-direction: column;
+    }
+    .formSection{
+        max-width: none;
+        align-self: stretch;
+        padding: 1rem 3%;
+        margin-bottom: 1rem;
+    }
+    .formSection input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .prescriptionLog{
+        min-width: 0;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px){
+    body > h1{
+        font-size: 2.2rem;
+        padding: 1rem 5%;
+    }
+    body > section{
+        margin: 0 5%;
+    }
+    h1 + section{
+        padding: 1rem;
+    }
+    .meds{
+        padding: 0 3% .5rem;
+    }
+    .meds h4{
+        display: block;
+    }
+}
