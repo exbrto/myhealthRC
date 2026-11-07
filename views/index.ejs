@@ -18,6 +18,10 @@
     <section class="parentSection">
     <section class="formSection">
         <form action="/prescriptions" method="POST">
+            <h5>Add your prescription in the form below.</br>
+                To update the quantity and refills field just simply click on that field and then press the save button.<br></br>
+                If you're not longer taking a prescription, simply click the trash button to delete that prescription.
+            </h5>
             <h3>Date Received: </h3><input type="date" name="dateReceived" required></input>   <!-- string inside of the vlaue must exactly match the enum array strings or the session can't be saved to the databser -->
             <h3>Name of Prescription: </h3><input type="text" name="name" placeholder="ex. Advil" required></input>
             <h3>Prescription instructions: </h3><input type="text" name="instructions" placeholder="ex. Take 1 two times a day..." required></input>
@@ -25,9 +29,6 @@
             <h3>Expiration: </h3><input type="date" name="expiration"required></input>
             <h3>Refills Remaining: </h3><input type="number" min="0" name="refills" placeholder="ex. 3" required></input><br></br>
             <button type="submit" class="add">Add</button>
-            <h5>To update the quantity and refills field just simply click on that field and then press the save button.<br></br>
-                If you're not longer taking a prescription, simply click the trash button to delete that prescription.
-            </h5>
         </form>
     </section>
     <section class="prescriptionLog"> 
